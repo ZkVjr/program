@@ -10,6 +10,31 @@ using namespace std;
 //return p1.z < p2.z;
 //
 
+#include <bits/stdc++.h>
+
+using namespace std;
+int main(){
+    int n;
+    cin >> n;
+    vector<int> v(n);
+    for(int i = 0; i < n; i++){
+        cin >> v[i];
+    }
+    int cnt = 0;
+    for(int i = 0; i < n; i++){
+        for(int j = i; j < n; j++){
+            int ans = v[i] - v[j];
+            if(ans % 200 == 0){
+                cnt++;
+            }
+        }
+    }
+    cout << cnt << endl;
+    return 0;
+}
+
+
+
 signed main() {
     ios_base::sync_with_stdio(0);
     cin.tie(0);
@@ -20,7 +45,7 @@ signed main() {
         int n, q; // количество ступенек и количество запросов,
         cin >> n >> q;
         vector<int> v(n);
-        int mx = -999999999999999999;
+        int mx = -999999999999999999LL;
         int mxi = 0;
         for (int i = 0; i < n; i++) {
             cin >> v[i]; // разницы в высотах ступенек
@@ -29,7 +54,7 @@ signed main() {
                 mxi = i;
             }
         }
-        vector<int> pr_sum(1);
+        vector<int> pr_sum(2);
         pr_sum[0] = v[0];
         for (int i = 1; i < n; i++) {
             pr_sum[i] = pr_sum[i - 1] + v[i];
@@ -58,6 +83,7 @@ signed main() {
                 }
             }
         }
+        cout << endl;
     }
     return 0;
 }
