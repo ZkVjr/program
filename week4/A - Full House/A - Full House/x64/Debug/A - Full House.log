@@ -1,0 +1,3 @@
+﻿  A - Full House.cpp
+C:\Users\Максим Захаров\Desktop\prog\program\A - Full House\A - Full House.cpp(18,2): warning C4834: удаление возвращаемого значения функции с атрибутом [[nodiscard]]
+  A - Full House.vcxproj -> C:\Users\Максим Захаров\Desktop\prog\program\A - Full House\x64\Debug\A - Full House.exe

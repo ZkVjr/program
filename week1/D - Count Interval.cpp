@@ -1,6 +1,7 @@
 ﻿
 #include <iostream>
 #include <vector>
+#include <map>
 
 using namespace std;
 using ll = long long;
@@ -17,15 +18,14 @@ void solve() {
     for (int i = 1; i < n; i++) {
         pr_sum[i] = v[i] + pr_sum[i - 1];
     }
-    vector <ll> cnt(n);
+    map <ll, ll> cnt(n);
+    cnt[0] = 1;
     ll res = 0;
     for (int i = 0; i < n; i++) {
         res += cnt[pr_sum[i] - k];
         cnt[pr_sum[i]]++;
     }
-    for (int i = 0; i < n; i++) {
-        cout << cnt[i] << " ";
-    }
+    cout << cnt[k] << "\n";
 }
 
 int main() {
