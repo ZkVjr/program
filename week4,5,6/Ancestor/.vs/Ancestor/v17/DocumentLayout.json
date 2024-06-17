@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\u041C\u0430\u043A\u0441\u0438\u043C \u0417\u0430\u0445\u0430\u0440\u043E\u0432\\Desktop\\prog\\program\\Ancestor\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{6B1F9309-CA67-4628-9E33-183B203EAF22}|Ancestor.vcxproj|C:\\Users\\\u041C\u0430\u043A\u0441\u0438\u043C \u0417\u0430\u0445\u0430\u0440\u043E\u0432\\Desktop\\prog\\program\\Ancestor\\Ancestor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{6B1F9309-CA67-4628-9E33-183B203EAF22}|Ancestor.vcxproj|solutionrelative:Ancestor.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Ancestor.cpp",
+              "DocumentMoniker": "C:\\Users\\\u041C\u0430\u043A\u0441\u0438\u043C \u0417\u0430\u0445\u0430\u0440\u043E\u0432\\Desktop\\prog\\program\\Ancestor\\Ancestor.cpp",
+              "RelativeDocumentMoniker": "Ancestor.cpp",
+              "ToolTip": "C:\\Users\\\u041C\u0430\u043A\u0441\u0438\u043C \u0417\u0430\u0445\u0430\u0440\u043E\u0432\\Desktop\\prog\\program\\Ancestor\\Ancestor.cpp",
+              "RelativeToolTip": "Ancestor.cpp",
+              "ViewState": "AQIAAAcAAAAAAAAAAAAcwB8AAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-10T13:33:00.554Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

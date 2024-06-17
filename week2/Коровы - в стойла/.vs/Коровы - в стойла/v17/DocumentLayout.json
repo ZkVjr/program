@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\\u041C\u0430\u043A\u0441\u0438\u043C \u0417\u0430\u0445\u0430\u0440\u043E\u0432\\Desktop\\prog\\program\\\u041A\u043E\u0440\u043E\u0432\u044B - \u0432 \u0441\u0442\u043E\u0439\u043B\u0430\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{69C7FD0A-EF84-453A-9780-F5EB3EC3433F}|\u041A\u043E\u0440\u043E\u0432\u044B - \u0432 \u0441\u0442\u043E\u0439\u043B\u0430.vcxproj|C:\\Users\\\u041C\u0430\u043A\u0441\u0438\u043C \u0417\u0430\u0445\u0430\u0440\u043E\u0432\\Desktop\\prog\\program\\\u041A\u043E\u0440\u043E\u0432\u044B - \u0432 \u0441\u0442\u043E\u0439\u043B\u0430\\\u041A\u043E\u0440\u043E\u0432\u044B - \u0432 \u0441\u0442\u043E\u0439\u043B\u0430.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{69C7FD0A-EF84-453A-9780-F5EB3EC3433F}|\u041A\u043E\u0440\u043E\u0432\u044B - \u0432 \u0441\u0442\u043E\u0439\u043B\u0430.vcxproj|solutionrelative:\u041A\u043E\u0440\u043E\u0432\u044B - \u0432 \u0441\u0442\u043E\u0439\u043B\u0430.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "\u041A\u043E\u0440\u043E\u0432\u044B - \u0432 \u0441\u0442\u043E\u0439\u043B\u0430.cpp",
+              "DocumentMoniker": "C:\\Users\\\u041C\u0430\u043A\u0441\u0438\u043C \u0417\u0430\u0445\u0430\u0440\u043E\u0432\\Desktop\\prog\\program\\\u041A\u043E\u0440\u043E\u0432\u044B - \u0432 \u0441\u0442\u043E\u0439\u043B\u0430\\\u041A\u043E\u0440\u043E\u0432\u044B - \u0432 \u0441\u0442\u043E\u0439\u043B\u0430.cpp",
+              "RelativeDocumentMoniker": "\u041A\u043E\u0440\u043E\u0432\u044B - \u0432 \u0441\u0442\u043E\u0439\u043B\u0430.cpp",
+              "ToolTip": "C:\\Users\\\u041C\u0430\u043A\u0441\u0438\u043C \u0417\u0430\u0445\u0430\u0440\u043E\u0432\\Desktop\\prog\\program\\\u041A\u043E\u0440\u043E\u0432\u044B - \u0432 \u0441\u0442\u043E\u0439\u043B\u0430\\\u041A\u043E\u0440\u043E\u0432\u044B - \u0432 \u0441\u0442\u043E\u0439\u043B\u0430.cpp",
+              "RelativeToolTip": "\u041A\u043E\u0440\u043E\u0432\u044B - \u0432 \u0441\u0442\u043E\u0439\u043B\u0430.cpp",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAAB0AAAAZAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2024-06-13T18:12:36.017Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
