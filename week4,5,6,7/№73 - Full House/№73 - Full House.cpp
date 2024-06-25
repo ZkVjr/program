@@ -15,31 +15,17 @@ void solve() {
 	for (int i = 0; i < 5; i++) {
 		cin >> v[i];
 	}
-	all(v);
-	int mni = -1, cnt = 0, cnt1 = 0;
-	for (int i = 0; i < 4; i++) {
-		mni = i;
-		if (v[i] == v[i + 1]) {
-			cnt++;
+	sort(all(v));
+	for (int i = 0; i < 2; ++i) {
+		if (v[0] == v[1] && v[2] == v[3] && v[3] == v[4] && v[0] != v[4]) {
+			cout << "Yes\n";
+			return;
 		}
-		else {
-			break;
-		}
-		
+		reverse(all(v));
 	}
-	for (int i = mni; i < 4; i++) {
-		if (v[i] == v[i + 1]) {
-			cnt1++;
-		}
-	}
-	if ((cnt == 3 && cnt1 == 2) || (cnt == 2 && cnt1 == 3) || (cnt == 5)) {
-		cout << "Yes";
-	}
-	else {
-		cout << "No";
-	}
+	cout << "No\n";
 }
-	
+
 
 int main() {
 	ios::sync_with_stdio(0);
