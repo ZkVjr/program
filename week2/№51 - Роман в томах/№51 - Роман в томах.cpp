@@ -10,31 +10,49 @@
 using namespace std;
 using ll = long long;
 
-void solve() {
-	int n;
-	cin >> n;
+const int N = 100;
+
+int n, k, a[N];
+bool check(int m) {
+	int cnt = 1;
 	int sum = 0;
-	vector<int> ans;
+	int ansi = -99;
 	for (int i = 0; i < n; i++) {
-		double l, r, a, b, c;
-		cin >> l >> r >> a >> b >> c;
-		double v = -b / 2 * a;
-		while (l + 1.0 < r) {
-			double mid = (l + r) / 2;
-			if (mid > v) {
-				r = mid;
+		sum += a[i];
+		if (sum > m) {
+
+			if (i == ansi) {
+				return 0;
 			}
 			else {
-				l = mid;
+				cnt++;
+				sum = 0;
+				i--;
+				ansi = i;
 			}
+
 		}
-		sum += (a * l * l + b * l + c);
-		ans.push_back(l);
 	}
-	cout << setprecision(3) << fixed <<  sum << "\n";
+	return cnt <= k;
+}
+void solve() {
+	cin >> n;
 	for (int i = 0; i < n; i++) {
-		cout << ans[i] << " ";
+		cin >> a[i];
 	}
+	cin >> k;
+
+	int l = 0, r = 40000;
+	while (l + 1 < r) {
+		int m = (l + r) / 2;
+		if (check(m)) {
+			r = m;
+		}
+		else {
+			l = m;
+		}
+	}
+	cout << r;
 }
 
 int main() {

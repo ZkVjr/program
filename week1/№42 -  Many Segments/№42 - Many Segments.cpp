@@ -20,23 +20,18 @@ void solve() {
 		cin >> l >> x >> y;
 		x = x * 2;
 		y = y * 2;
-		if (l == 2) {
-			y -= 1;
-		}
-		if (l == 3) {
-			x += 1;
-		}
-		if (l == 4) {
-			x += 1;
-			y -= 1;
-		}
+		x += (l == 3 || l == 4);
+		y -= (l == 2 || l == 4);
 		p.emplace_back(x, y);
 	}
 	ll cnt = 0;
-	for (int i = 0; i < n - 1; i++) {
-		if (min(p[i].second, p[i + 1].second) >= max(p[i + 1].first, p[i].first)) {
-			cnt++;
+	for (int i = 0; i < n; i++) {
+		for (int j = i + 1; j < n; ++j) {
+            if (min(p[i].second, p[j].second) >= max(p[j].first, p[i].first)) {
+			    cnt++;
+		    }
 		}
+		
 	}
 	cout << cnt << "\n";
 

@@ -22,8 +22,8 @@ void solve() {
 	}
 	// D > 0
 	if (D > 0) {
-		cout << (-b - sqrt(D)) / 2 * a << " ";
-		cout << (-b + sqrt(D)) / 2 * a;
+		cout << (-b - sqrt(D)) / (2 * a) << " ";
+		cout << (-b + sqrt(D)) / (2 * a);
 	}
 }
 

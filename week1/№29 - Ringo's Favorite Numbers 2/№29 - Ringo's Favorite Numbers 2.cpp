@@ -11,15 +11,15 @@ using namespace std;
 using ll = long long;
 
 void solve() {
-	int n;
+	ll n;
 	cin >> n;
-	vector<int> v(n);
-	vector<int> cnt(200);
+	vector<ll> v(n);
+	vector<ll> cnt(200);
 	for (int i = 0; i < n; i++) {
 		cin >> v[i];
 		cnt[v[i] % 200]++;
 	}
-	int sum = 0;
+	ll sum = 0;
 	for (int i = 0; i < 200; i++) {
 		sum += (cnt[i] * (cnt[i] - 1)) / 2;
 	}

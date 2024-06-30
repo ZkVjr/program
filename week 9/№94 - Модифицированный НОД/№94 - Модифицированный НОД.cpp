@@ -12,20 +12,32 @@ using namespace std;
 using ll = long long;
 
 void solve() {
+	int a, b;
+	cin >> a >> b;
+	map<int, int> v;
+	for (int i = 1; i <= min(a, b); i++) {
+		if (a % i == 0 && b % i == 0) {
+			v[i] = 1;
+		}
+	}
 	int n;
 	cin >> n;
-	vector<int> v(n);
-	map<int, int> cnt;
-	for (int i = 0; i < n; ++i) {
-		cin >> v[i];
-		cnt[v[i]]++;
+	int cnt = 0;
+	for (int i = 0; i < n; i++) {
+		int l0, r0;
+		cin >> l0 >> r0;
+		for (int j = r0; j >= l0; j--) {          
+			if (v.find(j) == v.end()) {
+				cout << j << "\n";
+				cnt++;
+				break;
+			}
+		}
+		if (cnt == 0) {
+			cout << "-1\n";
+		}
+		
 	}
-	ll res = 0;
-	res += ll(n * (n - 1) / 2);
-	for (auto [key, val] : cnt) {
-		res -= ll(val * (val - 1) / 2);
-	}
-	cout << res << "\n";
 }
 
 int main() {

@@ -11,23 +11,14 @@ using namespace std;
 using ll = long long;
 
 void solve() {
-	int n;
-	cin >> n;
-	vector<int> v(n);
-	vector<int> cop;
-	for (int i = 0; i < n; i++) {
-		cin >> v[i];
-		cop.push_back(v[i] % 200);
+	string s1, s2;
+	cin >> s1 >> s2;
+	if (s1 == s2) {
+		cout << s1 << "\n";
 	}
-	vector<int> cnt(200);
-	for (int i = 0; i < n; i++) {
-		cnt[cop[i]]++;
+	else {
+		cout << "1\n";
 	}
-	int sum = 0;
-	for (int i = 0; i < 200; i++) {
-		sum += ((cnt[i] * (cnt[i] - 1))) / 2;
-	}
-	cout << sum << "\n";
 }
 
 int main() {

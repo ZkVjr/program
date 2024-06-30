@@ -4,7 +4,6 @@
 #include<algorithm>
 #include<string>
 #include<cmath>
-#include<map>
 
 #define all(x) (x).begin(), x.end()
 #define sz(x) (int)(x).size()
@@ -14,21 +13,25 @@ using ll = long long;
 void solve() {
 	int n;
 	cin >> n;
-	map<ll, int> cnt;
-	vector<int> v(n);
-	for (int i = 0; i < n; i++) {
-		cin >> v[i];
-		cnt[v[i]]++;
+	vector<int> cnt(n + 1);
+	vector<int> a(n + 1);
+	for (int i = 1; i <= n; i++) {
+		cin >> a[i];
+		cnt[a[i]]++;
 	}
-	int c = n * (n - 1) / 2;
+	vector<int> b(n + 1);
+	for (int i = 1; i <= n; i++) {
+		cin >> b[i];
+	}
+	vector<int> c(n + 1);
+	for (int i = 1; i <= n; i++) {
+		cin >> c[i];
+	}
 	ll res = 0;
-	for (const auto& [ind, kol] : cnt) {
-		int kol = kol * (kol - 1) / 2;
-		res += kol;
+	for (int j = 1; j <= n; j++) {
+		res += cnt[b[c[j]]];
 	}
-	cout << c - res;
-
-	
+	cout << res << "\n";
 }
 
 int main() {

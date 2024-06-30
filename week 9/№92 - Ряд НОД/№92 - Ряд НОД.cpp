@@ -4,6 +4,7 @@
 #include<algorithm>
 #include<string>
 #include<cmath>
+#include <numeric>
 
 #define all(x) (x).begin(), x.end()
 #define sz(x) (int)(x).size()
@@ -11,37 +12,32 @@ using namespace std;
 using ll = long long;
 
 void solve() {
-	int n, q;
-	cin >> n >> q;
-	vector<int> a(n); // разница между ступенек
+	ll n, m;
+	cin >> n >> m;
+	vector<ll> a(n);
 	for (int i = 0; i < n; i++) {
 		cin >> a[i];
 	}
-	vector<int> k(q); // запросы
+	vector<ll> b(m);
+	for (int i = 0; i < m; i++) {
+		cin >> b[i];
+	}
+	ll sum = 0;
 	for (int i = 0; i < n; i++) {
-		cin >> k[i];
+		sum += (ll)b[0] + a[i];
 	}
-	vector<int> pr(n);
-	pr[0] = a[0];
-	for (int i = 1; i <= n; i++) {
-		pr[i] = max(pr[i - 1], a[i]);
+	ll s = gcd(a[0] + b[0], sum);
+	cout << s << " ";
+	for (int i = 1; i < m; i++) {
+		cout << abs(s - b[0]) + b[i] << " ";
 	}
-	for (int i = 0; i < q; i++) {
-		if (k[i] > a[0]) {
-			cout << "0" << "\n";
-		}
-		if (k[i] <= pr[n - 1]) {
-			cout <<
-		}
-	}
-
 }
 
 int main() {
 	ios::sync_with_stdio(0);
 	cin.tie(0), cout.tie(0);
 	int z = 1;
-	cin >> z;
+	//cin >> z
 	while (z--) {
 		solve();
 	}
