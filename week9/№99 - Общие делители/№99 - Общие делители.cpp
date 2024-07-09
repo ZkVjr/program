@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 #include <vector>
 #include<iomanip>
 #include<algorithm>
@@ -24,7 +24,7 @@ void solve() {
 	for (int i = 0; i < a.size(); i++) {
 		cout << baza[i] << " ";
 	}
-	vector<pair<ll, ll>> cnt(10e12);
+	vector<pair<ll, ll>> cnt(1e12);
 	for (int i = 0; i < baza.size(); i++) {
 		for (int j = 2; j * j <= baza[i]; j++) {
 			if (baza[i] % j == 0) {
@@ -36,7 +36,7 @@ void solve() {
 		}
 	}
 	sort(all(cnt));
-	for (int i = 10e12; i >= 2; i--) {
+	for (int i = 1e12; i >= 2; i--) {
 		cout << cnt[i].first << " " << cnt[i].second << "// --->";
 	}
 }
