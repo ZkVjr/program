@@ -9,49 +9,38 @@ using ll = long long;
 void solve() {
     ll a, b;
     cin >> a >> b;
-    vector<ll> cnt(min(a, b) + 1);
-    for(int i = 1; i * i <= a; i++){
-        if(a % i == 0){
-            cnt[i]++;
-            if(a != i * i){
-                if(a / i <= min(a, b)){
-                    cnt[a / i]++;
-                }
-                
-            }
-            
+    ll g = gcd(a, b);
+    vector<int> p;
+    for(int i = 1; i * i <= g; i++){
+        if(g % i == 0){
+            p.push_back(i);
+            p.push_back(g / i);
         }
     }
-    for(int i = 1; i * i <= b; i++){
-        if(b % i == 0){
-            cnt[i]++;
-            if(b != i * i){
-                if(b / i <= min(a, b)){
-                     cnt[b / i]++;
-                }
-               
-            }
-            
-        }
-    }
-    
-    
+    sort(all(p));
     int n;
     cin >> n;
     for(int i = 0; i < n; i++){
-        ll l, r;
-        cin >> l >> r;
-        for(ll j = r; j >= l; j--){
-            if(j <= min(a, b) && cnt[j] == 2){
-                cout << j << "\n";
-                break;
-            }
-            if(j == l){
-                cout << "-1\n";
+        ll left, right;
+        cin >> left >> right;
+        int l = 0, r = p.size();
+        while(l + 1 < r){
+            int m = (l + r) / 2;
+            if(p[m] <= right){
+                l = m;
+            } else{
+                r = m;
             }
         }
+        if(p[l] < left){
+            cout << "-1\n";
+        } else{
+            cout << p[l] << "\n";
+        }
+        
     }
 }
+    
 
 int main() {
    ios::sync_with_stdio(0);
