@@ -13,22 +13,28 @@ void solve() {
     vector<ll> b(m);
     for(int i = 0; i < n; i++){
         cin >> a[i];
-    }
-    for(int i = 0; i < m; i++){
-        cin >> b[i];
-    }
-    vector<ll> cop;
-    cop = a;
-    for(int j = 0; j < m; j++){
-        a = cop;
-        for(int i = 0; i < n; i++){
-            a[i] += b[j];
+        if(i != 0){
+            a[i] = abs(a[0] - a[i]);
         }
-        ll g = a[0];
-        for(int i = 1; i < n; i++){
+    }
+    ll g = a[1];
+    if(n > 1){
+        for(int i = 2; i < n; i++){
             g = gcd(g, a[i]);
         }
-        cout << g << "\n";
+    }
+    
+    ll cop = a[0];
+    for(int i = 0; i < m; i++){
+        cin >> b[i];
+        if(n > 1){
+            a[0] = cop;
+            a[0] += b[i];
+            cout << gcd(a[0], g) << " ";
+        } else{
+            cout << a[0] + b[i] << " ";
+        }
+        
     }
 
 }

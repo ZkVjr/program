@@ -10,7 +10,7 @@ void solve() {
     ll a, b;
     cin >> a >> b;
     set<int> st;
-    for(int i = 0; i < gcd(a, b) + min(a, b) + 1; i++){
+    for(int i = 0; i * i <= max(a, b); i++){
         ll g = gcd(a + i, b + i);
         st.insert(g);
     }

@@ -7,19 +7,21 @@ using namespace std;
 using ll = long long;
 
 void solve() {
-	ll b, d;
-	cin >> b >> d;
-	ll r = ((b - 1) * gcd(b, d)) / d;
-	cout << r <<  "\n";
+    ll a, b, c, d;
+    cin >> a >> b >> c >> d;
+    ll P = a * b * c * d - min(a * d, b * c) * min(a * d, b * c);
+    ll Q = a * b * c * d;
+    ll g = gcd(P, Q);
+    cout << P / g << "/" << Q / g;
 }
 
 int main() {
    ios::sync_with_stdio(0);
    cin.tie(0), cout.tie(0);
    int z = 1;
-   cin >> z;
+   //cin >> z;
    while (z--) {
-	  solve();
+      solve();
    }
    return 0;
 }
