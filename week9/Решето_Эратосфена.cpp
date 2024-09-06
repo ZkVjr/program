@@ -8,33 +8,45 @@ using ll = long long;
 
 vector<ll> used;
 vector<ll> p;
-void resheto(int n){
+void resheto(ll n){
     //изменяем размер вектора на n + 1
     used.resize(n + 1);
 
-    for(int i = 2; i <= n; i++){
-        if(used[i] == 0){
-            p.push_back(i);
-            for(int j = i * i; j <= n; j+= i){
-                used[j] = 1;
-            }
-        }
-        else{
+    for(ll i = 2; i <= n; i++){
+        if(used[i]){
             continue;
         }
+        
+        p.push_back(i);
+        for(ll j = i * i; j <= n; j += i){
+            used[j] = 1;
+        }
+        
     }
     
 }
 void solve() {
-    int n;
-    cin >> n;
-    resheto(n + 1000);
+    ll l, n;
+    cin >> l >> n;
+    resheto(n);
     vector<ll> v;
     v = p;
-    for(int i = 0; i < v.size(); i++){
-        cout << v[i] << " ";
+    vector<ll> cop;
+    for(ll i = 0; i < v.size(); i++){
+        if(v[i] >= l){
+            cop.push_back(v[i]);
+        } 
+        
     }
-    cout << v[n - 1] << "\n";
+    if(cop.size() == 0){
+        cout << "0\n";
+    } else{
+        for(ll i = 0; i < cop.size(); i++){
+        cout << cop[i] << " ";
+    }
+    }
+    
+    
     
 }
 
@@ -42,7 +54,7 @@ int main() {
    ios::sync_with_stdio(0);
    cin.tie(0), cout.tie(0);
    int z = 1;
-   cin >> z;
+   //cin >> z;
    while (z--) {
       solve();
    }

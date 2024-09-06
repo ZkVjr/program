@@ -7,10 +7,24 @@ using namespace std;
 using ll = long long;
 
 void solve() {
-     int n, m;
-     cin >> n >> m;
-     
-     
+    int n, k;
+    cin >> n >> k;
+    string s;
+    cin >> s;
+    int cnt = 0;
+    for(int i = 0; i < s.size(); i++){
+       
+       if(cnt != k){
+            cout << s[i];
+        }
+        if(cnt == k){
+            cout << 'x';
+        }
+
+        if(s[i] == 'o' && cnt != k){
+            cnt++;
+        }
+    }
 }
 
 int main() {

@@ -6,24 +6,10 @@
 using namespace std;
 using ll = long long;
 
-int d(int x){
-    int res = 0;
-    for(int i = 1; i * i <= x; ++i){
-        if(x % i == 0){
-            res += 2;
-            if(i == x/i){
-                res--;
-            }
-        }
-    }
-    return res;
-}
-
 void solve() {
-    int a, b;
-    cin >> a >> b;
-    cout << d(abs(a - b)) << "\n";
-    
+   int a, b;
+   cin >> a >> b;
+   cout << abs(a - gcd(a, b)) << "\n";
 }
 
 int main() {

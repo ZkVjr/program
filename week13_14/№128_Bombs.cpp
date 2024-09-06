@@ -6,23 +6,15 @@
 using namespace std;
 using ll = long long;
 
-int d(int x){
-    int res = 0;
-    for(int i = 1; i * i <= x; ++i){
-        if(x % i == 0){
-            res += 2;
-            if(i == x/i){
-                res--;
-            }
+void solve() {
+    int r, c;
+    cin >> r >> c;
+    vector<vector<char>> a(r, vector<char>(c));
+    for(int i = 0; i < r; i++){
+        for(int j = 0; j < c; j++){
+            cin >> a[i][j];
         }
     }
-    return res;
-}
-
-void solve() {
-    int a, b;
-    cin >> a >> b;
-    cout << d(abs(a - b)) << "\n";
     
 }
 
@@ -30,7 +22,7 @@ int main() {
    ios::sync_with_stdio(0);
    cin.tie(0), cout.tie(0);
    int z = 1;
-   cin >> z;
+   //cin >> z;
    while (z--) {
       solve();
    }
