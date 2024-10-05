@@ -61,6 +61,10 @@ void solve() {
             cout << "No";
             return;
         }
+        if(ps[i].F < pt[i].F && ps[i].F == 1){
+            cout << "No";
+            return;
+        }
         // if((ps[i].F < pt[i].F) && (2 * (ps[i].F - 1) + ps[i].F < pt[i].F)){
         //     cout << "No";
         //     return;

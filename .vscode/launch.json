@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/prog_for_github/program/week4_5_6_7",
-      "program": "c:/prog_for_github/program/week4_5_6_7/build/Debug/outDebug",
+      "cwd": "c:/prog_for_github/program/week15_16",
+      "program": "c:/prog_for_github/program/week15_16/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

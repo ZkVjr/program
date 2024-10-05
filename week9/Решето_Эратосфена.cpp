@@ -38,12 +38,26 @@ void solve() {
         } 
         
     }
+    int cnt = 0;
     if(cop.size() == 0){
         cout << "0\n";
     } else{
-        for(ll i = 0; i < cop.size(); i++){
-        cout << cop[i] << " ";
-    }
+        for(int i = 0; i < cop.size(); i++){
+            string s = to_string(cop[i]);
+           // cout << s << " " <<  s.size();
+            ll sum = 0;
+            for(ll j = 0; j < s.size(); j++){
+                sum += s[j] - '0';
+            }
+            if(sum % 2 == 0){
+                cout << cop[i] << " ";
+                cnt++;
+            }
+        
+        }
+        if(cnt == 0){
+            cout << "0\n";
+        }
     }
     
     
