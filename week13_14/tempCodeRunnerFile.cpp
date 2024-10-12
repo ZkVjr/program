@@ -14,61 +14,25 @@ using vvll = vector<vll>;
 using str = string;
 using db = double;
 
- vector<pair<ll, char>> per(str st){
-    vector<pair<ll, char>> pst;
-    ll count = 0;
-    for(int i = 0; i < st.size() - 1; i++){
-        count++;
-        if(st[i] != st[i + 1]){
-          pst.emplace_back(count, st[i]);
-          count = 0;
-          if(i == st.size() - 2){
-            pst.emplace_back(1, st[i + 1]);
-          }
-        } 
-    }
-    count = 0;
-    return pst;
-}
 void solve() {
-    str s, t;
-    cin >> s >> t;
-    if(s == t){
-        cout << "Yes";
+    ll x, a, d, n;
+    cin >> x >> a >> d >> n;
+    vll v(1);
+    v[0] = a;
+    ll dif = 1e16;
+    if(a == x || d == 0){
+        cout << "0";
         return;
     }
-    if(s.size() > t.size()){
-        cout << "No";
-        return;
-    }
-    
-    vector<pair<ll, char>> ps;
-    ps = per(s);
-   
-    vector<pair<ll, char>> pt;
-    pt = per(t);
-
-    if(ps.size() != pt.size()){
-        cout << "No";
-        return;
-    }
-    for(int i = 0; i < ps.size(); i++){
-        if(ps[i].S != pt[i].S){
-            cout << "No";
+    for(int i = 0; i < n; i++){
+        if(abs(v[i] - x) <= dif){
+            dif = abs(v[i] - x);
+        } else{
+            cout << dif;
             return;
         }
-        if(ps[i].F > pt[i].F){
-            cout << "No";
-            return;
-        }
-        // if((ps[i].F < pt[i].F) && (2 * (ps[i].F - 1) + ps[i].F < pt[i].F)){
-        //     cout << "No";
-        //     return;
-        // }
-    }
-    cout << "Yes";
-
-    
+        v.pb(v[i] + d);
+    } 
 
 }
 

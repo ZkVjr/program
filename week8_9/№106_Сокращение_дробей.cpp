@@ -15,23 +15,23 @@ using str = string;
 using db = double;
 
 void solve() {
-   ll n, q;
-   cin >> n >> q;
-   str s;
-   cin >> s;
-   str ss = s + s;
-   ll start = 0;
-   for(int i = 0; i < q; i++){
-        ll t, x;
-        cin >> t >> x;
-        
-        if(t == 1){
-            start = (start - x + s.size()) % s.size();
-
-        }
-        if(t == 2){
-         cout << ss[start + x - 1] << "\n";
-        }
+   ll n, m;
+   cin >> n >> m;
+   vll ch(n);
+   for(int i = 0; i < n; i++){
+      cin >> ch[i];
+   }
+   vll zn(n);
+   for(int i = 0; i < n; i++){
+      cin >> zn[i];
+   }
+   for(int i = 0; i < n; i++){
+      for(int j = 0; j < n; j++){
+         if(gcd(ch[i], zn[j]) > 1){
+            ch[i] /= gcd(ch[i], zn[j]);
+            zn[j] /= gcd(ch[i], zn[j]);
+         }
+      }
    }
 }
 
